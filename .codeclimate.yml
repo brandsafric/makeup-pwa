@@ -3,7 +3,7 @@ engines:
   tslint:
     enabled: true
     channel: beta
-    config: src/tslint.json
+    config: tslint.json
   duplication:
     enabled: true
     exclude_paths:
