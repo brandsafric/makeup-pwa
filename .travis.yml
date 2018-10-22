@@ -25,5 +25,6 @@ before_script:
 - ng build
 
 script:
+= ng lint
 - ng test --watch=false
 - ng e2e
