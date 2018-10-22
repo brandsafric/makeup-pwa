@@ -19,6 +19,5 @@ checks:
   method-lines:
     config:
       threshold: 50
-exclude_paths:
+exclude_patterns:
 - "assets/"
-- "docs/"
