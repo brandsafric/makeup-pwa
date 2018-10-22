@@ -8,8 +8,6 @@ plugins:
     enabled: true
   duplication:
     enabled: true
-    exclude_paths:
-    - config
     config:
       languages:
       - javascript
@@ -24,6 +22,3 @@ checks:
 exclude_paths:
 - "assets/"
 - "docs/"
-ratings:
-  paths:
-  - "src/**/**.ts"
