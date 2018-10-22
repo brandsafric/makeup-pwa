@@ -1,12 +1,10 @@
 sudo: required
 language: node_js
 node_js:
-- '10.3.0'
-
+- 10.3.0
 cache:
   directories:
-  - "node_modules"
-
+  - node_modules
 addons:
   apt:
     sources:
@@ -14,17 +12,18 @@ addons:
     packages:
     - google-chrome-stable
     - google-chrome-beta
-
 before_install:
 - export CHROME_BIN=chromium-browser
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
-
 before_script:
 - npm install -g @angular/cli
 - ng build
-
 script:
-= ng lint
+- ng lint
 - ng test --watch=false
 - ng e2e
+deploy:
+  provider: firebase
+  token:
+    secure: m2nW67b9l0E9kHefKU4dXMsdyiRJEvDMkW3VEcRRveg6nveOAxbZaYzryZ3Qj3TSPqQtApwa8PlxzrKMKY7//Om/JnPfOQ49w15L+eax/zKgfhFdRAKvzddXy+0AhBcSlWZTTtIbbk/I384ts5/bpluSNy5VkRd8Z66q4Vk05TMN0qQZDvBfnODEU2L6cKmLO3Gii248lbhPiraAtNZEFoJUOLNTF90W02fDZAZ8b3clElgYQ+SNfBH540YtswXiNvb5kIarxYEBhOfWiYXXbR4gFGjTh/fwAUrCgNF0v43X769ACy1Mfm5B5L9qx0mpCPYW5WNGmy3GJtxa8raz1T8Sbm0QIhFTimTr990t7eFQ/XooXvMcOH45Wfl02kDQ1oyrvHM6BucuR7LZ44kciGfXvSZAuBs3UlNTXnd5Z+Dve1d6AIVgDmgEzjkLq0YDqbXHY7xuJt/saAkCtAujCzUgNUrxf/ktDLq0uQyFl1ATlWJR7FNeQukjuzQD4Z1sfqcJOdEshQTKS+F54y3Z9xtgFpzmLUtRYXxPU6G0iSh+rsp/mrlCYdQyX7lGDhSAbgR9VtUupy55ZljL8wKqKHuvHjucRoqT+WfYs78Ex6/CS/zxQ7F/24Tbsn1O3zoQdtud327Qf+DpFpbofYee0tBFZL/U8r8AWenVcLHF/1E=
