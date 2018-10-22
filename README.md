@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/AlexBrownX/makeup-pwa.svg?branch=master)](https://travis-ci.org/AlexBrownX/makeup-artist-website)
+[![Dependency Status](https://img.shields.io/david/AlexBrownX/makeup-pwa.svg?style=flat-square)](https://david-dm.org/AlexBrownX/makeup-pwa)
+[![devDependency Status](https://img.shields.io/david/dev/AlexBrownX/makeup-pwa.svg?style=flat-square)](https://david-dm.org/AlexBrownX/makeup-pwa#info=devDependencies)
 
 # Personal Project - Makeup Artist Website (Angular PWA)
 
