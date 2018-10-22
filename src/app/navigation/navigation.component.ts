@@ -19,7 +19,6 @@ export class NavigationComponent {
       map(result => result.matches)
     );
 
-  // TODO - THis is a test
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.closeDrawerOnRouteChange();
   }

@@ -1,5 +1,13 @@
 ---
-engines:
+plugins:
+  fixme:
+    enabled: true
+    config:
+      strings:
+      - FIXME
+      - BUG
+      - TODO
+      - REFACTOR
   tslint:
     enabled: true
     channel: beta
@@ -12,14 +20,7 @@ engines:
       languages:
       - javascript
       - typescript
-  fixme:
-    enabled: true
-    config:
-      strings:
-      - FIXME
-      - BUG
-      - TODO
-      - CUSTOM
+
 ratings:
   paths:
   - src/**/*
