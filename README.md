@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AlexBrownX/makeup-pwa.svg?branch=master)](https://travis-ci.org/AlexBrownX/makeup-artist-website)
+
 # Personal Project - Makeup Artist Website (Angular PWA)
 
 ## Development server
