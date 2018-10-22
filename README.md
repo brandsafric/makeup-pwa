@@ -2,6 +2,7 @@
 [![Dependency Status](https://img.shields.io/david/AlexBrownX/makeup-pwa.svg?style=flat-square)](https://david-dm.org/AlexBrownX/makeup-pwa)
 [![devDependency Status](https://img.shields.io/david/dev/AlexBrownX/makeup-pwa.svg?style=flat-square)](https://david-dm.org/AlexBrownX/makeup-pwa#info=devDependencies)
 [![Maintainability](https://api.codeclimate.com/v1/badges/db237c25bc3b5424d02b/maintainability)](https://codeclimate.com/github/AlexBrownX/makeup-pwa/maintainability)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 # Personal Project - Makeup Artist Website (Angular PWA)
 
