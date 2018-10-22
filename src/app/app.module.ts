@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppComponent } from './app.component';
+import { AngularFireModule } from '@angular/fire';
 import { LayoutModule } from '@angular/cdk/layout';
+import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { GalleryMainPageComponent } from './gallery-main-page/gallery-main-page.component';
@@ -32,6 +33,7 @@ import {
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
