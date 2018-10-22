@@ -1,21 +1,26 @@
+---
 engines:
+  tslint:
+    enabled: true
+    channel: beta
   duplication:
     enabled: true
+    exclude_paths:
+    - config
     config:
       languages:
-        javascript:
-          mass_threshold: 80
+      - javascript
   eslint:
     enabled: true
   fixme:
     enabled: true
+  scss-lint:
+    enabled: true
 ratings:
   paths:
-  - "**.js"
+  - src/**/*
+  - config/**/*
   - "**.ts"
-  - "app/**/*"
+  - "**.js"
 exclude_paths:
-- dist/
-- test/
-- lib/
-
+- dist
