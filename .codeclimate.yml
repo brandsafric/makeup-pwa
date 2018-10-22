@@ -11,10 +11,15 @@ engines:
     config:
       languages:
       - javascript
+      - typescript
   fixme:
     enabled: true
-  scss-lint:
-    enabled: true
+    config:
+      strings:
+      - FIXME
+      - BUG
+      - TODO
+      - CUSTOM
 ratings:
   paths:
   - src/**/*
