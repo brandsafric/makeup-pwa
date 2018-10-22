@@ -18,11 +18,11 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_script:
 - npm install -g @angular/cli
-- ng build
 script:
 - ng lint
 - ng test --watch=false
 - ng e2e
+-   ng build --prod
 deploy:
   provider: firebase
   token:
