@@ -4,8 +4,6 @@ plugins:
   tslint:
     enabled: true
     config: tslint.json
-  nodesecurity:
-    enabled: true
   duplication:
     enabled: true
     config:
