@@ -1,0 +1,7 @@
+<mat-button-toggle-group
+  #group="matButtonToggleGroup"
+  [value]="selectedTheme | async"
+  (change)="changeTheme(group.value)"
+  [vertical]="true">
+    <mat-button-toggle *ngFor="let customTheme of customThemes" [value]="customTheme">{{ customTheme.displayName }}</mat-button-toggle>
+</mat-button-toggle-group>
