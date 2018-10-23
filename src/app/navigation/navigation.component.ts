@@ -14,6 +14,8 @@ export class NavigationComponent {
 
   @ViewChild('drawer') drawer: MatSidenav;
 
+  public title = 'Jana Jurakova Makeup Artist';
+
   public isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
