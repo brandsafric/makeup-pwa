@@ -23,6 +23,10 @@ const routes: Routes = [
     data: {
       title: 'Contact'
     }
+  }, {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   }
 ];
 
