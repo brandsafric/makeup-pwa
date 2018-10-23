@@ -21,9 +21,9 @@
       <button
         type="button"
         mat-icon-button
+        aria-label="Toggle sidenav"
         matTooltip="Opens side navigation menu"
         [matTooltipShowDelay]="(isHandset$ | async) ? 200 : 800"
-        aria-label="Toggle sidenav"
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side navigation toggle icon">menu</mat-icon>
       </button>
