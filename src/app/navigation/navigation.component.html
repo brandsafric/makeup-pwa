@@ -2,7 +2,7 @@
   <mat-sidenav
       #drawer
       class="sidenav mat-elevation-z6"
-      [fixedInViewport]="(isHandset$ | async)"
+      [fixedInViewport]="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'push'">
     <mat-toolbar role="heading">Menu</mat-toolbar>
@@ -27,7 +27,7 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side navigation toggle icon">menu</mat-icon>
       </button>
-      <h1>Jana Jurakova Makeup Artist</h1>
+      <h1 class="title-center">{{title}}</h1>
     </mat-toolbar>
 
     <!-- Dynamic page content -->
