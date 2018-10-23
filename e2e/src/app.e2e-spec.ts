@@ -1,4 +1,4 @@
-import {AppPage, MenuItems} from './app.po';
+import { AppPage, MenuItems } from './app.po';
 import { browser } from 'protractor';
 
 describe('Jana Jurakova Makeup App', () => {
