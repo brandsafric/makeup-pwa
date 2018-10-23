@@ -2,7 +2,7 @@
   <mat-sidenav
       #drawer
       class="sidenav mat-elevation-z6"
-      fixedInViewport="true"
+      [fixedInViewport]="(isHandset$ | async)"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'push'">
     <mat-toolbar role="heading">Menu</mat-toolbar>
@@ -20,10 +20,12 @@
     <mat-toolbar color="primary" class="mat-elevation-z6">
       <button
         type="button"
-        aria-label="Toggle sidenav"
         mat-icon-button
+        matTooltip="Opens side navigation menu"
+        [matTooltipShowDelay]="(isHandset$ | async) ? 200 : 800"
+        aria-label="Toggle sidenav"
         (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side navigation toggle icon">menu</mat-icon>
       </button>
       <h1>Jana Jurakova Makeup Artist</h1>
     </mat-toolbar>

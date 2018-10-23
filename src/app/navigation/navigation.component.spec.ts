@@ -11,6 +11,7 @@ import {
   MatListModule,
   MatSidenavModule,
   MatToolbarModule,
+  MatTooltipModule,
 } from '@angular/material';
 
 describe('NavigationComponent', () => {
@@ -29,6 +30,7 @@ describe('NavigationComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        MatTooltipModule
       ],
       declarations: [
         NavigationComponent,

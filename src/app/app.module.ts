@@ -18,7 +18,9 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
-  MatButtonToggleModule } from '@angular/material';
+  MatButtonToggleModule,
+  MatTooltipModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -31,17 +33,18 @@ import {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
     MatButtonModule,
     MatButtonToggleModule,
-    MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

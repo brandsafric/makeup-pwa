@@ -10,7 +10,9 @@ import {
   MatIconModule,
   MatListModule,
   MatSidenavModule,
-  MatToolbarModule} from '@angular/material';
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,12 +20,13 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         BrowserAnimationsModule,
-        MatToolbarModule,
         MatButtonModule,
         MatButtonToggleModule,
-        MatSidenavModule,
         MatIconModule,
-        MatListModule
+        MatListModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatTooltipModule
       ],
       declarations: [
         AppComponent,
