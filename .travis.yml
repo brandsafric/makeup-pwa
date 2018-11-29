@@ -2,12 +2,12 @@ sudo: required
 language: node_js
 node_js:
 - 10.3.0
+env:
+  global:
+  - CC_TEST_REPORTER_ID=9b1f58c2a515f1df493bcd2d9e652da535558a1afdc4291fdd89214da4d43a8d
 cache:
   directories:
   - node_modules
-code_climate:
-  repo_token:
-    secure: goxMom8RmEZNErkniM/kBg0xxu/xEFlXfEkn7wR4Jmpfx+9iFDWuqTz6dh9p0jdwDNoKRcav6O5zH+ssMXmVJAVT5BbCteq8+rfI5l15E8fdB1lcAD0wSBav6pPaur3pyci+NaFI4T1l8UUgeyPCq84O9jzO7uXHsOttlpNGKuO7F4FEg/4ZQNd4sTRyxvONd3rHcQtR2SevzCNjq++bLKa8M+ph0c2BNcCsIP99B0CTBaIGPXCmbRNzKG9FPfrlk99MXiKajq0hrExk3PxyaMwLWFQTsXfg/Ld2FRWvAGxq31h3fp7Ak+6BgGUL2jZtNt7MOSXeT7at7UcjmCeoq2hAD4bM30B7Um2snxaDfg1rEjcM3cpFitX8yEGai+yl4POlBiix28ONiH+JBKUsmUI6xq83rm2JsyyqHM5O34sI/LpioydJsT7wT3P6OfDmL54JFe5Y3vMT4AAHqwY9wkHuM4xC5XDZLSIoLSzdZwxh/HSZOn3W+bS01vMvtE8drye5N9CnHJoEPLsOFrNsUHeYuxgsE+sBvy8Z1YEUbR1hArHiMNASSCzo6+SM1nwg0+sx3eowMs9uw/1vMwrGVZB//4qBLpa41wi3CYv3+MvnSYvEBkfiBBShuM6Kf4bpuSfN/Lg3bh/0zLxiXqfr7atLiD7Y1+0t0a1jUN/DzJ8=
 addons:
   apt:
     sources:
@@ -21,14 +21,16 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_script:
 - npm install -g @angular/cli
-- npm install codeclimate-test-reporter
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
 script:
 - ng lint
 - npm run test-with-coverage
 - ng e2e
 - npm run build-with-timestamp
 after_script:
-- codeclimate-test-reporter < ./coverage/lcov.info
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 deploy:
   skip_cleanup: true
   provider: firebase
