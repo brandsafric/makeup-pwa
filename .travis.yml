@@ -2,6 +2,9 @@ sudo: required
 language: node_js
 node_js:
 - 10.3.0
+env:
+  global:
+  - CC_TEST_REPORTER_ID=9b1f58c2a515f1df493bcd2d9e652da535558a1afdc4291fdd89214da4d43a8d
 cache:
   directories:
   - node_modules
@@ -18,11 +21,16 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_script:
 - npm install -g @angular/cli
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
 script:
 - ng lint
-- ng test --watch=false
+- npm run test-with-coverage
 - ng e2e
 - npm run build-with-timestamp
+after_script:
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 deploy:
   skip_cleanup: true
   provider: firebase
@@ -30,3 +38,4 @@ deploy:
     branch: master
   token:
     secure: m2nW67b9l0E9kHefKU4dXMsdyiRJEvDMkW3VEcRRveg6nveOAxbZaYzryZ3Qj3TSPqQtApwa8PlxzrKMKY7//Om/JnPfOQ49w15L+eax/zKgfhFdRAKvzddXy+0AhBcSlWZTTtIbbk/I384ts5/bpluSNy5VkRd8Z66q4Vk05TMN0qQZDvBfnODEU2L6cKmLO3Gii248lbhPiraAtNZEFoJUOLNTF90W02fDZAZ8b3clElgYQ+SNfBH540YtswXiNvb5kIarxYEBhOfWiYXXbR4gFGjTh/fwAUrCgNF0v43X769ACy1Mfm5B5L9qx0mpCPYW5WNGmy3GJtxa8raz1T8Sbm0QIhFTimTr990t7eFQ/XooXvMcOH45Wfl02kDQ1oyrvHM6BucuR7LZ44kciGfXvSZAuBs3UlNTXnd5Z+Dve1d6AIVgDmgEzjkLq0YDqbXHY7xuJt/saAkCtAujCzUgNUrxf/ktDLq0uQyFl1ATlWJR7FNeQukjuzQD4Z1sfqcJOdEshQTKS+F54y3Z9xtgFpzmLUtRYXxPU6G0iSh+rsp/mrlCYdQyX7lGDhSAbgR9VtUupy55ZljL8wKqKHuvHjucRoqT+WfYs78Ex6/CS/zxQ7F/24Tbsn1O3zoQdtud327Qf+DpFpbofYee0tBFZL/U8r8AWenVcLHF/1E=
+
