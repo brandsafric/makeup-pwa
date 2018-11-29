@@ -8,6 +8,7 @@
     "build-prod": "ng build --prod",
     "build-with-timestamp": "npm-run-all build-prod write-timestamp",
     "test": "ng test",
+    "test-with-coverage": "ng test --watch=false --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "write-timestamp": "ts-node --skip-project src/write-timestamp.ts"
