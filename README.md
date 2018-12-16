@@ -39,7 +39,7 @@ This project uses [Travis CI](https://travis-ci.org/) to build the project, runs
 
 ### Travis CI
 
-The Travis [configuration](./.travis.yml) configures Travis to run the following actions on the remote Travis build server:
+The Travis [configuration](./.travis.yml) runs the following actions on the remote build server:
 
 * Tells Travis that the Node environment version is 10.3.0
 * Sets a CC_TEST_REPORTER encrypted environment variable that allows test reports to be sent to Code Climate
@@ -58,7 +58,7 @@ Deployed application URL: https://makeup-website.firebaseapp.com
 
 ### Code Climate 
 
-The Code Climate [configuration](./.codeclimate.yml) configures runs:
+The Code Climate [configuration](./.codeclimate.yml) runs:
 
 * Typescript and Javascript linting
 * Method Complexity checking
