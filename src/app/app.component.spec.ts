@@ -1,37 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { NavigationComponent } from './navigation/navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThemeChangerComponent } from './theme-changer/theme-changer.component';
-import {
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatIconModule,
-  MatListModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatTooltipModule
-} from '@angular/material';
+import { HomePageComponent } from './home-page/home-page.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatButtonToggleModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatTooltipModule
+        BrowserAnimationsModule
       ],
       declarations: [
         AppComponent,
-        NavigationComponent,
-        ThemeChangerComponent
+        HomePageComponent
       ],
     }).compileComponents();
   }));

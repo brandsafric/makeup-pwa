@@ -22,4 +22,9 @@ describe('HomePageComponent', () => {
   it('should create the home page component', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain the page title', () => {
+    const titleElm = fixture.nativeElement.querySelector('h1');
+    expect(titleElm.innerText).toContain('Jana Jurakova Makeup Artist');
+  });
 });

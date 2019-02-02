@@ -71,7 +71,6 @@ The Code Climate [configuration](./.codeclimate.yml) runs:
 * To something different to website when people add to homescreen
 * Evaluate Angular Material, is this the right tool to add design elements
 * Evaluate other photo browser plugins PhotoSwipe is out of date
-* Theme switcher, think of a way to load themes dynamically
 * Periodically update out of date dependencies
 * Configure BrowserStack to run parallel testing and report results in Code Climate 
 * Add google analytics
