@@ -5,8 +5,10 @@ $padding-amount: 50px;
 
 .top-nav {
   overflow: hidden;
-  padding: $padding-amount;
-  //border: 1px solid red;
+  padding: 30px 50px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+
 
   @media screen and (min-width: 500px) {
     padding: 0;
@@ -38,6 +40,23 @@ $padding-amount: 50px;
     }
   }
 
+  .logo {
+    width: 200px;
+    background: url("../../assets/images/logo.jpg") no-repeat;
+    background-size: cover;
+    height: 70px;
+
+    &.active,
+    &:focus,
+    &:hover {
+      border-bottom-color: $white-color;
+    }
+
+    @media screen and (min-width: 500px) {
+      height: auto;
+    }
+  }
+
   // TODO - Fix this inverted responsive part
   // Hide menu items except the logo
   @media screen and (max-width: 500px) {
@@ -50,8 +69,11 @@ $padding-amount: 50px;
 
   // Position toggle
   .menu-toggle {
-    float: right;
-    display: block;
+    //float: right;
+    //display: block;
+    position: absolute;
+    right: 30px;
+    top: 55px;
     background-color: $highlight-color;
     color: $white-color;
     border: 0;
@@ -65,13 +87,15 @@ $padding-amount: 50px;
   // Open the menu
   &.openMobileMenu {
     position: relative;
+    padding: 50px;
 
     // Top corner for toggle
     .menu-toggle {
       position: absolute;
-      right: $padding-amount;
-      top: $padding-amount;
+      //right: $padding-amount;
+      //top: 55px;
       background-color: $white-color;
+      border: 3px solid $highlight-color;
       color: $highlight-color;
 
       &.active,
@@ -84,10 +108,13 @@ $padding-amount: 50px;
 
     // Show all the menu items
     .menu-item {
-      display: block;
-      float: none;
+      //display: block;
+      display: inline-block;
+      padding: 5px 5px;
+      margin: 10px 16px;
+      float: left;
+      clear: left;
       text-align: left;
-      width: 60%;
     }
 
     // Hide the logo
