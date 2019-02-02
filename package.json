@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "health-check": "npm run test-with-coverage && npm run e2e",
+    "health-check": "npm run lint && npm run test-with-coverage && npm run e2e",
     "build-prod": "ng build --prod",
     "build-with-timestamp": "npm-run-all build-prod write-timestamp",
     "test-with-coverage": "ng test --watch=false --code-coverage",
