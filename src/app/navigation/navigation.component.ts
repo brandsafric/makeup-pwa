@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.breakpointObserver
-      .observe(['(min-width: 500px)'])
+      .observe(['(min-width: 850px)'])
       .subscribe((state: BreakpointState) => {
         this.isMobile = !state.matches;
         this.menuItems = this.elRef.nativeElement.querySelectorAll('.menu-item');
