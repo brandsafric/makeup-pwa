@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "build-prod": "ng build --prod --no-progress",
     "health-check": "npm run lint && npm run test-with-coverage && npm run e2e",
-    "build-prod": "ng build --prod",
+    "test-with-coverage": "ng test --watch=false --code-coverage --no-progress",
     "build-with-timestamp": "npm-run-all build-prod write-timestamp",
-    "test-with-coverage": "ng test --watch=false --code-coverage",
     "write-timestamp": "ts-node --skip-project src/write-timestamp.ts"
   },
   "private": true,
