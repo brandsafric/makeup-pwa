@@ -1,0 +1,98 @@
+$highlight-color: #C22485;
+$white-color: #FFFFFF;
+$gray-color: #313131;
+$padding-amount: 50px;
+
+.top-nav {
+  overflow: hidden;
+  padding: $padding-amount;
+  //border: 1px solid red;
+
+  @media screen and (min-width: 500px) {
+    padding: 0;
+  }
+
+  .menu-item,
+  .menu-toggle {
+    //border: 1px solid purple;
+    display: block;
+    border-bottom: 3px solid $white-color;
+    float: left;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 17px;
+    text-decoration: none;
+    color: $gray-color;
+    font-weight: 500;
+
+    @media screen and (min-width: 500px) {
+      padding: $padding-amount 16px;
+    }
+  }
+
+  .menu-item {
+    &.active,
+    &:focus,
+    &:hover {
+      border-bottom-color: $highlight-color;
+    }
+  }
+
+  // TODO - Fix this inverted responsive part
+  // Hide menu items except the logo
+  @media screen and (max-width: 500px) {
+    .menu-item {
+      &:not(.logo) {
+        display: none;
+      }
+    }
+  }
+
+  // Position toggle
+  .menu-toggle {
+    float: right;
+    display: block;
+    background-color: $highlight-color;
+    color: $white-color;
+    border: 0;
+    border-radius: 50px;
+
+    @media screen and (min-width: 500px) {
+      display: none;
+    }
+  }
+
+  // Open the menu
+  &.openMobileMenu {
+    position: relative;
+
+    // Top corner for toggle
+    .menu-toggle {
+      position: absolute;
+      right: $padding-amount;
+      top: $padding-amount;
+      background-color: $white-color;
+      color: $highlight-color;
+
+      &.active,
+      &:focus,
+      &:hover {
+        background-color: $highlight-color;
+        color: $white-color;
+      }
+    }
+
+    // Show all the menu items
+    .menu-item {
+      display: block;
+      float: none;
+      text-align: left;
+      width: 60%;
+    }
+
+    // Hide the logo
+    .logo {
+      display: none;
+    }
+  }
+}

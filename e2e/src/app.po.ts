@@ -1,4 +1,4 @@
-import { browser, by, element } from 'protractor';
+import {browser, by, element, ElementArrayFinder} from 'protractor';
 
 export class AppPage {
   static navigateTo() {
@@ -9,7 +9,7 @@ export class AppPage {
     return browser.get('/' + pageUrl);
   }
 
-  static getPageTitle() {
-    return element(by.css('h1')).getText();
+  static getMenuItems(): ElementArrayFinder {
+    return element.all(by.css('.menu-item'));
   }
 }

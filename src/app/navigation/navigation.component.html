@@ -1,0 +1,31 @@
+<!--suppress ALL -->
+<div class="navigation-wrapper">
+    <nav class="top-nav" [class.openMobileMenu]="openMobileMenu">
+
+      <!-- About -->
+      <a class="menu-item active" href="#about" (click)="handleMenuClick($event);">About Jana</a>
+
+      <!-- Gallery -->
+      <a class="menu-item" href="#gallery" (click)="handleMenuClick($event);">Gallery</a>
+
+      <!-- Prices -->
+      <a class="menu-item" href="#prices" (click)="handleMenuClick($event);">Prices</a>
+
+      <!-- LOGO -->
+      <a class="menu-item logo" href="#about" (click)="handleMenuClick($event);">*** LOGO GOES HERE ***</a>
+
+      <!-- Testimonials -->
+      <a class="menu-item" href="#testimonials" (click)="handleMenuClick($event);">Testimonials</a>
+
+      <!-- Blog  -->
+      <a class="menu-item" href="#blog" (click)="handleMenuClick($event);">Blog</a>
+
+      <!-- Contact Me -->
+      <a class="menu-item" href="#contact" (click)="handleMenuClick($event);">Contact Me</a>
+
+      <!-- Toggle -->
+      <button type="button" class="menu-toggle" (click)="toggleMenu()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+</div>

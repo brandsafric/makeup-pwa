@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageComponent } from './home-page/home-page.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,7 +13,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        HomePageComponent
+        NavigationComponent
       ],
     }).compileComponents();
   }));
