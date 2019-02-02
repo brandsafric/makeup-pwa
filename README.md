@@ -41,7 +41,7 @@ This project uses [Travis CI](https://travis-ci.org/) to build the project, runs
 
 The Travis [configuration](./.travis.yml) runs the following actions on the remote build server:
 
-* Tells Travis that the Node environment version is 10.3.0
+* Tells Travis that the Node environment version is 11.8.0
 * Sets a CC_TEST_REPORTER encrypted environment variable that allows test reports to be sent to Code Climate
 * Caches the node_modules directory for faster builds
 * Downloads and configures the Chrome browser for automated testing
