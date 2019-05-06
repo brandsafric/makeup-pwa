@@ -9,8 +9,11 @@ $padding-amount: 50px;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 
+
   @media screen and (min-width: 850px) {
     padding: 0;
+    justify-content: center;
+    display: flex;
   }
 
   .menu-item,
@@ -52,6 +55,7 @@ $padding-amount: 50px;
 
     @media screen and (min-width: 850px) {
       height: auto;
+      display: table;
     }
   }
 
