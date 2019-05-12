@@ -10,12 +10,14 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
+import { IntroductionComponent } from './introduction/introduction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    NavigationComponent
+    NavigationComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,

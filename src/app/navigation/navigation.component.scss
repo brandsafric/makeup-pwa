@@ -4,11 +4,9 @@ $gray-color: #313131;
 $padding-amount: 50px;
 
 .top-nav {
+  position: relative;
   overflow: hidden;
-  padding: 30px 50px;
-  -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
-
+  padding: 30px 30px;
 
   @media screen and (min-width: 850px) {
     padding: 0;
